@@ -1,0 +1,42 @@
+﻿@model MVC.Controllers.BetDocumentViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>BetDocumentViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Market)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Market)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Odds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Odds)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

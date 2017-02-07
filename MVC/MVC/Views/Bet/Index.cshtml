@@ -1,4 +1,4 @@
-﻿@model MVC.Controllers.BetDocumentViewModel
+﻿@model Messaging.Models.BetDocumentViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -33,10 +33,23 @@
         <dd>
             @Html.DisplayFor(model => model.Odds)
         </dd>
-
+        
     </dl>
+
+</div>
+<div>
+    @using (Html.BeginForm("Index", "Bet", FormMethod.Post))
+    {
+        @Html.DisplayNameFor(m => m.Market)
+
+        @Html.TextBoxFor(m => m.Market)
+        <input type="submit"/>
+    }
 </div>
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
     @Html.ActionLink("Back to List", "Index")
+
+       
+              
 </p>
